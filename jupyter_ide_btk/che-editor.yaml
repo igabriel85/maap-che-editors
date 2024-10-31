@@ -11,7 +11,7 @@ attributes:
   repository: https://gitlab.dev.info.uvt.ro/sage/maap/maap-jupyter-ide-ascend
   firstPublicationDate: 2024-10-12
   iconMediatype: image/svg+xml
-    iconUrl: https://gitlab.dev.info.uvt.ro/sage/maap/maap-jupyter-ide-ascend/-/raw/master/maap-jupyter-ide-ascend.svg
+    iconUrl: https://raw.githubusercontent.com/igabriel85/maap-che-editors/refs/heads/main/logo/ESA_logo_simple.svg
 components:
 - name: jupyter-ide
   container:

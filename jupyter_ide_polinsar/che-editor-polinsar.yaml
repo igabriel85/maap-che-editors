@@ -12,7 +12,7 @@ metadata:
     repository: 'https://github.com/IslamAlam/sar-introduction'
     firstPublicationDate: '2024-10-16'
     iconMediatype: image/svg+xml
-      iconData: |
+    iconData: |
         <?xml version="1.0" encoding="UTF-8" standalone="no"?>
         <!-- Created with Inkscape (http://www.inkscape.org/) -->
         <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.0" width="242.88606" height="242.97513" id="svg2429">
@@ -23,25 +23,25 @@ metadata:
           </g>
         </svg>
 components:
-- name: jupyter-ide
-  container:
-    image: harbor.ade.esa-maap.org/cache-quay.io/is3mansour/maap-sar-intro:latest
-    env:
-      - name: JUPYTER_NOTEBOOK_DIR
-        value: /projects
-      - name: CONDA_ENVS_PATH
-        value: /projects/envs
-    mountSources: true
-    memoryLimit: 15Gi
-    imagePullPolicy: IfNotPresent
-    endpoints:
-      - name: jupyter
-        targetPort: 3100
-        exposure: public
-        protocol: https
-        secure: true
+    - name: jupyter-ide
+      container:
+        image: harbor.ade.esa-maap.org/cache-quay.io/is3mansour/maap-sar-intro:latest
+        env:
+          - name: JUPYTER_NOTEBOOK_DIR
+            value: /projects
+          - name: CONDA_ENVS_PATH
+            value: /projects/envs
+        mountSources: true
+        memoryLimit: 15Gi
+        imagePullPolicy: IfNotPresent
+        endpoints:
+          - name: jupyter
+            targetPort: 3100
+            exposure: public
+            protocol: https
+            secure: true
+            attributes:
+              type: main
         attributes:
-          type: main
-    attributes:
-      ports:
-        - exposedPort: 3100
+          ports:
+            - exposedPort: 3100
